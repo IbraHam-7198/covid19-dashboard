@@ -90,7 +90,7 @@ Global_deaths = data_prep.dataframes_analysis(Daily_Deaths)
 
 
 # Dictionary of Continents
-continents = {'NA': 'North America','SA': 'South America', 'AS': 'Asia','OC': 'Australia',
+continents = {'NA': 'North America','SA': 'South America', 'AS': 'Asia','OC': 'Oceania',
 'AF': 'Africa','EU': 'Europe', 'World': 'World'}
 
 continents_reverse = dict({(j,i) for i,j in continents.items()})
