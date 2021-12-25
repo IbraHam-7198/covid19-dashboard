@@ -195,11 +195,11 @@ with st.expander("See Explanation on Beta (Slope) and R-squared"):
 
     st.write(f""" <p align = "left", style="color:lightblue">
 
-    * The Beta (Slope) value can be interpreted as the percentage change (increase or decrease) in number of daily deaths due to a percentage change in the number of daily cases. If the Beta (Slope) value is positive, then there is a positive relationship between the daily cases and daily deaths. Whilst if the Beta (Slope) value is negative then there is a negative relationship between the daily cases and daily deaths. <br>
+    * The Beta (Slope) value can be interpreted as the percentage change (increase or decrease) in the number of daily deaths due to a percentage change in the number of daily cases. If the Beta (Slope) value is positive, then there is a positive relationship between the daily cases and daily deaths. Whilst if the Beta (Slope) value is negative then there is a negative relationship between the daily cases and daily deaths. <br>
 
     * The Rsquared measure can take values between 0 and 1 and is an indication on the reliability of the Beta (Slope) value computed above. If the value is closer to one, then the Beta (Slope) value is more reliable and if the value is closer to 0, then the Beta (Slope) value is less reliable. <br>
 
-    * The Beta (Slope) metric is a dynamic one. This metric is a rolling one, computed using the daily cases and daily deaths over the last {number_of_days} days. The metric itself was computed by carrying out a linear regression between the log of daily deaths and the log of daily deaths. <br> 
+    * The Beta (Slope) metric is a dynamic one. This metric is a rolling one, computed using the daily cases and daily deaths over the last {number_of_days} days. The metric itself was computed by carrying out a linear regression between the log of daily deaths and the log of daily cases. <br> 
 
     * The Beta (Slope) metric cannot be interpreted in isolation. It must be studied in conjunction with the {number_of_days} Day Daily cases CAGR, {number_of_days} Day Daily Deaths CAGR, the number of Daily Cases and the number of Daily Deaths. <br>
 
