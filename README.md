@@ -1,4 +1,4 @@
-# COVID-19 Dashboard-
+# COVID-19 Dashboard
 
 This project involved collecting, preprocessing and visualizing data on COVID-19 made available by Center for Systems Science and Engineering (CSSE) at Johns Hopkins University.
 
