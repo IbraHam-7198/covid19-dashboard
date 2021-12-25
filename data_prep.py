@@ -14,7 +14,7 @@ import base64
 # 2. Dis-aggregate the Country Level data from accumulated totals to daily numbers
 # 3. Pivot the Tables into a form that is suitable for analysis on Python
 
-@st.experimental_memo
+@st.cache
 def dataframes_analysis(data):
 
     Country_names = []
