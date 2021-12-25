@@ -14,7 +14,7 @@ import statsmodels.api as sm
 from statsmodels.regression.rolling import RollingOLS
 
 # Plots
-continents = {'NA': 'North America','SA': 'South America', 'AS': 'Asia','OC': 'Australia',
+continents = {'NA': 'North America','SA': 'South America', 'AS': 'Asia','OC': 'Oceania',
 'AF': 'Africa','EU': 'Europe', 'World': 'World'}
 
 # Placeholders
