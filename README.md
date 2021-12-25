@@ -19,4 +19,4 @@ This work is licensed under a
 
 You can use, redistribute, and adapt the work done under this project for non-commercial purposes, as long as you (a) give appropriate credit to me "Ibrahim Hameem" for the work done on this project titled "COVID-19 Dashboard by Ibrahim Hameem (2021)", (b) indicate any changes that you've made, and (c) distribute any derivative works under the same license. https://creativecommons.org/licenses/by-nc-sa/4.0/
 
-[Click here to view the dashbaord](https://drive.google.com/file/d/1hn1RMKgVDwfrncsJ7TAZ6fcfMQtwwEss/view?usp=sharing)
+[Click here to view the dashbaord](https://share.streamlit.io/ibraham-7198/covid19-dashboard/main/app_new_1.py)
