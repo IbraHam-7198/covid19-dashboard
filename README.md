@@ -17,6 +17,6 @@ This work is licensed under a
 [cc-by-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
 
 
-You can use, redistribute, and adapt the work done under this project for non-commercial purposes, as long as you (a) give appropriate credit to me "Ibrahim Hameem" for the work done on this project titled "COVID-19 Dashbaord by Ibrahim Hameem (2021)", (b) indicate any changes that you've made, and (c) distribute any derivative works under the same license. https://creativecommons.org/licenses/by-nc-sa/4.0/
+You can use, redistribute, and adapt the work done under this project for non-commercial purposes, as long as you (a) give appropriate credit to me "Ibrahim Hameem" for the work done on this project titled "COVID-19 Dashboard by Ibrahim Hameem (2021)", (b) indicate any changes that you've made, and (c) distribute any derivative works under the same license. https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Click here to view the dashbaord](https://drive.google.com/file/d/1hn1RMKgVDwfrncsJ7TAZ6fcfMQtwwEss/view?usp=sharing)
