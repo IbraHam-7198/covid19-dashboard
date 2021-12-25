@@ -641,6 +641,6 @@ def plot4(cases, deaths,Continent, show_country, Country,number_of_days,corr_fun
                        title_text = 'CAGR + Daily Deaths/ Cases %', color = 'silver', title_font_size = 6, range = (-50,50), dtick = 10)
 
     fig.update_yaxes(showline = True, linecolor = 'lightgrey', secondary_y= False, 
-                       title_text = 'Beta (Slope) + Rsquared', color = 'silver', title_font_size = 6)
+                       title_text = 'Beta(Slope) + Rsquared', color = 'silver', title_font_size = 6)
     
     return fig   
