@@ -1,9 +1,8 @@
 # COVID-19 Dashboard-
 
-This project involved collecting, preprocessing and visualizing data on COVID-19 made available by Center for Systems Science and Engineering (CSSE) at Johns Hopkins University. The details on the data source is as follows:
+This project involved collecting, preprocessing and visualizing data on COVID-19 made available by Center for Systems Science and Engineering (CSSE) at Johns Hopkins University.
 
-
- Data Source **"COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University" or "JHU CSSE COVID-19 Data" for short, and the url: https://github.com/CSSEGISandData/COVID-19.**
+ Data Source: **"COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University" or "JHU CSSE COVID-19 Data" for short, and the url: https://github.com/CSSEGISandData/COVID-19.**
 
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
