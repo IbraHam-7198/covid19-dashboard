@@ -185,7 +185,7 @@ st.markdown('<h6 align="left", style="color:lightpink"> Warning: Do not use any 
 st.markdown(f"""<p align="left", style="color:dimgrey"> 
 * {np.round(number_of_days,0)} Day Rolling Daily Cases CAGR <br>
 * {np.round(number_of_days,0)} Day Rolling Deaths CAGR <br>
-* Percentage change in Daily Deaths due to an x% change in Daily Cases, based on data over the last {np.round(number_of_days,0)} Days (Beta(Slope)) <br>
+* Percentage change in Daily Deaths due to a 100% change in Daily Cases, based on data over the last {np.round(number_of_days,0)} Days (Beta(Slope)) <br>
 * Reliability of Beta(Slope) given by R-squared 
 </p> """,
  unsafe_allow_html = True)
