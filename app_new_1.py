@@ -7,8 +7,9 @@ from datetime import datetime
 from scipy.stats import pearsonr
 import streamlit as st
 import base64
-import data_prep
+import data_prep_1
 import Plots_new
+import sqlite3
 
 # Page Layout
 st.set_page_config(layout="wide")
@@ -79,14 +80,49 @@ with st.expander("About the creator"):
 
 
 # Importing the datasets
-Daily_cases= pd.read_csv('https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv')
+try:
+    Daily_cases= pd.read_csv('https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv')
 
-Daily_Deaths = pd.read_csv('https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv')
+    Daily_Deaths = pd.read_csv('https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv')
 
-# Creating the dataframes
-Global_cases = data_prep.dataframes_analysis(Daily_cases)
+    # Creating the dataframes
+    Global_cases = data_prep_1.dataframes_analysis(Daily_cases)
 
-Global_deaths = data_prep.dataframes_analysis(Daily_Deaths)
+    Global_deaths = data_prep_1.dataframes_analysis(Daily_Deaths)
+
+    Global_cases.Date = pd.to_datetime(Global_cases.Date)
+
+    Global_deaths.Date = pd.to_datetime(Global_deaths.Date)
+
+except:
+
+    # Global Cases:
+
+    # Connect the database
+    conn = sqlite3.connect('.\\covid_dash_27_Dec_21.db3')
+
+    #Read the data in the form of a dataframe
+    Global_cases = pd.read_sql("SELECT * FROM Global_cases;", con=conn)
+
+    # Updating the Date column into datetime
+    Global_cases.Date = pd.to_datetime(Global_cases.Date)
+
+    #Close the connection to the database
+    conn.close()
+
+    #Global Deaths:
+
+    # Connect the database
+    conn = sqlite3.connect('.\\covid_dash_27_Dec_21.db3')
+
+    #Read the data in the form of a dataframe
+    Global_deaths = pd.read_sql("SELECT * FROM Global_deaths;", con=conn)
+
+    # Updating the Date column into datetime
+    Global_deaths.Date = pd.to_datetime(Global_deaths.Date)
+
+    #Close the connection to the database
+    conn.close()
 
 
 # Dictionary of Continents
@@ -213,6 +249,6 @@ with st.expander("See Explanation on Beta (Slope) and R-squared"):
     </p>""", unsafe_allow_html=True)
 
 
-fig_3 = Plots_new.plot4(Global_cases, Global_deaths, Continent = continents_reverse[result_11], show_country=True_False_dict[result], Country = result_12,number_of_days = max(7,int(number_of_days)), corr_func = data_prep.corr, cagr_func=data_prep.cagr)
+fig_3 = Plots_new.plot4(Global_cases, Global_deaths, Continent = continents_reverse[result_11], show_country=True_False_dict[result], Country = result_12,number_of_days = max(7,int(number_of_days)), corr_func = data_prep_1.corr, cagr_func=data_prep_1.cagr)
 
 st.plotly_chart(fig_3)
