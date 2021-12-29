@@ -7,7 +7,7 @@ from datetime import datetime
 from scipy.stats import pearsonr
 import streamlit as st
 import base64
-import data_prep_1
+import data_prep
 import Plots_new
 import sqlite3
 
