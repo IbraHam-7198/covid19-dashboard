@@ -85,7 +85,7 @@ with st.expander("About the creator"):
 # Global Cases:
 
 # Connect the database
-conn = sqlite3.connect('.\\covid_dash_27_Dec_21.db3')
+conn = sqlite3.connect('.//covid_dash_27_Dec_21.db3')
 
 #Read the data in the form of a dataframe
 Global_cases = pd.read_sql("SELECT * FROM Global_cases;", con=conn)
@@ -99,7 +99,7 @@ conn.close()
 #Global Deaths:
 
 # Connect the database
-conn = sqlite3.connect('.\\covid_dash_27_Dec_21.db3')
+conn = sqlite3.connect('.//covid_dash_27_Dec_21.db3')
 
 #Read the data in the form of a dataframe
 Global_deaths = pd.read_sql("SELECT * FROM Global_deaths;", con=conn)
