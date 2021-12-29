@@ -80,35 +80,49 @@ with st.expander("About the creator"):
 
 
 # Importing the datasets
+try:
+    Daily_cases= pd.read_csv('https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv')
 
+    Daily_Deaths = pd.read_csv('https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv')
 
-# Global Cases:
+    # Creating the dataframes
+    Global_cases = data_prep.dataframes_analysis(Daily_cases)
 
-# Connect the database
-conn = sqlite3.connect('.//covid_dash_27_Dec_21.db3')
+    Global_deaths = data_prep.dataframes_analysis(Daily_Deaths)
 
-#Read the data in the form of a dataframe
-Global_cases = pd.read_sql("SELECT * FROM Global_cases;", con=conn)
+    Global_cases.Date = pd.to_datetime(Global_cases.Date)
 
-# Updating the Date column into datetime
-Global_cases.Date = pd.to_datetime(Global_cases.Date)
+    Global_deaths.Date = pd.to_datetime(Global_deaths.Date)
 
-#Close the connection to the database
-conn.close()
+except:
 
-#Global Deaths:
+    # Global Cases:
 
-# Connect the database
-conn = sqlite3.connect('.//covid_dash_27_Dec_21.db3')
+    # Connect the database
+    conn = sqlite3.connect('.\\covid_dash_27_Dec_21.db3')
 
-#Read the data in the form of a dataframe
-Global_deaths = pd.read_sql("SELECT * FROM Global_deaths;", con=conn)
+    #Read the data in the form of a dataframe
+    Global_cases = pd.read_sql("SELECT * FROM Global_cases;", con=conn)
 
-# Updating the Date column into datetime
-Global_deaths.Date = pd.to_datetime(Global_deaths.Date)
+    # Updating the Date column into datetime
+    Global_cases.Date = pd.to_datetime(Global_cases.Date)
 
-#Close the connection to the database
-conn.close()
+    #Close the connection to the database
+    conn.close()
+
+    #Global Deaths:
+
+    # Connect the database
+    conn = sqlite3.connect('.\\covid_dash_27_Dec_21.db3')
+
+    #Read the data in the form of a dataframe
+    Global_deaths = pd.read_sql("SELECT * FROM Global_deaths;", con=conn)
+
+    # Updating the Date column into datetime
+    Global_deaths.Date = pd.to_datetime(Global_deaths.Date)
+
+    #Close the connection to the database
+    conn.close()
 
 
 # Dictionary of Continents
