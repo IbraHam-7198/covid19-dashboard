@@ -86,9 +86,9 @@ try:
     Daily_Deaths = pd.read_csv('https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv')
 
     # Creating the dataframes
-    Global_cases = data_prep_1.dataframes_analysis(Daily_cases)
+    Global_cases = data_prep.dataframes_analysis(Daily_cases)
 
-    Global_deaths = data_prep_1.dataframes_analysis(Daily_Deaths)
+    Global_deaths = data_prep.dataframes_analysis(Daily_Deaths)
 
     Global_cases.Date = pd.to_datetime(Global_cases.Date)
 
@@ -249,6 +249,6 @@ with st.expander("See Explanation on Beta (Slope) and R-squared"):
     </p>""", unsafe_allow_html=True)
 
 
-fig_3 = Plots_new.plot4(Global_cases, Global_deaths, Continent = continents_reverse[result_11], show_country=True_False_dict[result], Country = result_12,number_of_days = max(7,int(number_of_days)), corr_func = data_prep_1.corr, cagr_func=data_prep_1.cagr)
+fig_3 = Plots_new.plot4(Global_cases, Global_deaths, Continent = continents_reverse[result_11], show_country=True_False_dict[result], Country = result_12,number_of_days = max(7,int(number_of_days)), corr_func = data_prep.corr, cagr_func=data_prep.cagr)
 
 st.plotly_chart(fig_3)
